@@ -10,7 +10,6 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building'
-                bat "./blob/main/infoProject.txt"
             }
         }
         stage('Deploy') {
@@ -21,10 +20,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing'
-                snykSecurity{
-                        snykInstallation:'Synk_Security',
-                        snykTokenId:'snyk-jenkins'
-                }
+                snykSecurity snykInstallation: 'Synk_Security', snykTokenId: 'snyk-jenkins', targetFile: 'infoProject'
             }
         }
         stage('Release') {
