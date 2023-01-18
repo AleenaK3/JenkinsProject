@@ -20,7 +20,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing'
-                snykSecurity snykInstallation: 'Synk_Security', snykTokenId: 'snyk-jenkins', targetFile: 'infoProject'
+                snykSecurity snykInstallation: 'Synk_Security', snykTokenId: 'snyk-jenkins', targetFile: 'infoProject.py'
             }
         }
         stage('Release') {
