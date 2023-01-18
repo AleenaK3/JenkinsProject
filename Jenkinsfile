@@ -10,6 +10,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building'
+                bat "./blob/main/infoProject.txt"
             }
         }
         stage('Deploy') {
