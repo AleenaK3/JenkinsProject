@@ -1,3 +1,0 @@
-This is a sample file.
-Created for Jenkins Project.
-Information Security Project.
