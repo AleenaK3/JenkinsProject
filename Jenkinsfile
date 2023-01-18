@@ -20,6 +20,11 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing'
+                snykSecurity{
+                    additionalArguments: '--all-projects',
+                        snykInstallation: 'Synk_Security',
+                        snykTokenId: 'snyk-jenkins'
+                }
             }
         }
         stage('Release') {
