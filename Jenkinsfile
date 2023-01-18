@@ -22,8 +22,8 @@ pipeline {
             steps {
                 echo 'Testing'
                 snykSecurity{
-                        snykInstallation: 'Synk_Security',
-                        snykTokenId: 'snyk-jenkins'
+                        snykInstallation:'Synk_Security',
+                        snykTokenId:'snyk-jenkins'
                 }
             }
         }
